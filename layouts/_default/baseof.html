@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+{{ partial "html_base/head.html" . }}
+<body>
+{{ partial "html_base/noscript.html" }}
+<div id="app">
+    <v-app>
+        {{ partial "navigation.html" . }}
+        {{ block "main" . }}
+        {{ end }}
+    </v-app>
+</div>
+{{ partial "html_base/vuetify.html" }}
+</body>
+</html>

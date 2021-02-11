@@ -1,0 +1,39 @@
+<v-container
+    fluid
+>
+    <v-container>
+        <v-row
+            dense
+        >
+            <v-col
+                cols="12"
+                md="6"
+            >
+                <h1>
+                    {{ .Site.Title }}
+                </h1>
+            </v-col>
+            <v-col
+                cols="12"
+                md="6"
+                class="
+                    d-flex
+                    flex-row
+                    py-4
+                    justify-end"
+            >
+                {{ range $.Site.Data.navigation }}
+                <div>
+                    <a
+                        href="{{ .uri }}"
+                        title="{{ .title }}"
+                        class="ml-10"
+                    >
+                            {{ .title }}
+                    </a>
+                </div>
+                {{ end }}
+            </v-col>
+        </v-row>
+    </v-container>
+</v-container>

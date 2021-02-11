@@ -1,0 +1,21 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        vuetify: new Vuetify({
+            theme: {
+                // apparently only does half the job...
+                disable: true
+                }
+            }
+        ),
+    })
+    // https://github.com/vuetifyjs/vuetify/issues/7097
+    // 9/10 vuetify devs wouldn't approve
+    const nastyThemeClass = 'theme--light'
+    let appDom = document.getElementsByClassName('v-application theme--light')
+    if (appDom.length === 1) {
+        appDom.item(0).classList.remove(nastyThemeClass)
+    }
+</script>
